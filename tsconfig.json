@@ -5,9 +5,15 @@
     "target": "es2021",
     "moduleResolution": "node",
     "sourceMap": true,
-    "rootDir": "./src",
     "outDir": "./dist",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
   },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "lib": ["es2021"]
 }

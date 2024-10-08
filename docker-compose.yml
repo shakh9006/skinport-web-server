@@ -21,22 +21,22 @@ services:
     ports:
       - "${REDIS_PORT}:6379"
 
-  main:
-    container_name: main
-    build:
-      context: .
-    env_file:
-      - .env
-    volumes:
-      - .:/app
-      - /app/node_modules
-    ports:
-      - '${PORT}:${PORT}'
-    command: sh -c "npm run db:migrate; npm run seed; npm run start"
-    depends_on:
-      - postgres
-      - redis
-    restart: always
+#  main:
+#    container_name: main
+#    build:
+#      context: .
+#    env_file:
+#      - .env
+#    volumes:
+#      - .:/app
+#      - /app/node_modules
+#    ports:
+#      - '${PORT}:${PORT}'
+#    command: sh -c "npm run db:migrate; npm run seed; npm run start"
+#    depends_on:
+#      - postgres
+#      - redis
+#    restart: always
 
 volumes:
   pgdata:
