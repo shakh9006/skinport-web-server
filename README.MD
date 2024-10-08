@@ -43,7 +43,7 @@
 - **Ответ:**
   ```json
   {
-    "message": '',
+    "message": "",
     "data": [
       {
         "name": "abc",
