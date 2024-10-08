@@ -20,10 +20,16 @@ export default function generateServer(): Application {
     });
   });
 
+  /**
+   * Основные 2 эндпоинта.
+   */
   app.use("/api/v1/items", itemsRoutes);
   app.use("/api/v1/purchase", purchaseRoutes);
 
-  //
+  /**
+   * В задаче было указано добавить только 2 эндпоинта,
+   * но я добавил ещё 2 для пользователя: чтобы создать пользователя с балансом и просмотреть данные о пользователе после покупки.
+   */
   app.use("/api/v1/user", userRoutes);
 
   app.all("*", (req: Request, res: Response) => {
