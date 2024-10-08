@@ -24,4 +24,11 @@ export class HttpErrorException extends Error {
   static NotFound(message = "Not found", statusCode = 404): HttpErrorException {
     return new HttpErrorException(message, statusCode);
   }
+
+  static Unauthorized(
+    message = "Access denied",
+    statusCode = 403,
+  ): HttpErrorException {
+    return new HttpErrorException(message, statusCode);
+  }
 }

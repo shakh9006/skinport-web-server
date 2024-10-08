@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { HttpErrorException } from "../exceptions/http-error.exception";
 
-export function httpErrorHandlerMiddleware(
+function httpErrorHandlerMiddleware(
   err: Error,
   req: Request,
   res: Response,
@@ -15,6 +15,7 @@ export function httpErrorHandlerMiddleware(
     });
   }
 
-  console.log("Server Error: ", err.message);
   return res.status(500).send({ message: "Something went wrong" });
 }
+
+export default httpErrorHandlerMiddleware;
