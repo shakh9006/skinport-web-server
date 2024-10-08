@@ -42,18 +42,21 @@
 
 - **Ответ:**
   ```json
-  [
-    {
-      "name": "abc",
-      "tradablePrice": 50.00,
-      "nonTradablePrice": 45.00
-    },
-    {
-      "name": "abc2",
-      "tradablePrice": 30.00,
-      "nonTradablePrice": 25.00
-    }
-  ]
+  {
+    "message": '',
+    "data": [
+      {
+        "name": "abc",
+        "tradablePrice": 50.00,
+        "nonTradablePrice": 45.00
+      },
+      {
+        "name": "abc2",
+        "tradablePrice": 30.00,
+        "nonTradablePrice": 25.00
+      }
+    ]
+  }
   ```
 
 ### 2. Процесс покупки предмета
@@ -80,7 +83,7 @@
 
 ## Тестирование
 
-### Для запуска тестов используйте следующую команду:
+### Для запуска тестов:
 ```bash
    npm run test
  ```
